@@ -5,10 +5,10 @@ def count_integer(numbers, integer):
         if (i == integer):
             count += 1
     if (count == 0):
-            count = 42
+        count = 42
     return count
 numbers = [6, 8, 10, 8, 20, 10, 8, 8]
-integer = 8
+integer = 10
 print(count_integer(numbers, integer))
 
 
@@ -59,3 +59,27 @@ def remove_duplicates(lst):
 lst = [6, 10, 8, 20]
 d = remove_duplicates(lst)
 print(d)
+
+#5
+def dict_function(dictionary):
+
+    try:
+        a = dictionary["Type"]
+    except:
+        a = dictionary.get("Type",["unknown type"])
+    try:
+        b = dictionary["Brand"]
+    except:
+        b = dictionary.get("Brand",["unknown brand"])
+    try:
+        c = dictionary["Price"]
+    except:
+        c = dictionary.get("Price",["unknown price"])
+    print("You have a", a , "from", b, "that costs", c)
+    dictionary["OS"] = "Linux"
+    print(dictionary)
+    return dictionary
+
+dictionary = {"Type": "TYPE", "Brand": "BRAND", "Price": "PRICE"}
+d = dict_function(dictionary)
+d
