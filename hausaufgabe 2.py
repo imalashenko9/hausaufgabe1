@@ -56,7 +56,7 @@ def remove_duplicates(lst):
             res.append(i)
     return res
 
-lst = [6, 10, 8, 20]
+lst = [6, 10, 8, 20,20]
 d = remove_duplicates(lst)
 print(d)
 
