@@ -260,17 +260,17 @@ class MyQueue:
 
     def size(self):
         return len(self.stack)
-k = MyQueue()
+q = MyQueue()
 
-k.push(2)
-k.push(3)
-k.push(5)
-k.push(8)
-print(k.show_left())
-print(k.show_right())
+q.push(2)
+q.push(3)
+q.push(5)
+q.push(8)
+print(q.show_left())
+print(q.show_right())
 
 
-print(k.size())
+print(q.size())
 
-print(k.pop())
-print(k)
+print(q.pop())
+print(q)
