@@ -2,7 +2,7 @@ def transform_to_row(infile, outfile):
 
     with open(infile, "r", encoding = "utf-8") as reader:
          contents = reader.readline()
-         [text] = contents.split(",")
+         text = contents.split(",")
     with open(outfile, "w", encoding = "utf-8") as writer:
          for items in text:
 
