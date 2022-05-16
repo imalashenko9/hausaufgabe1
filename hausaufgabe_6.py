@@ -33,12 +33,14 @@ strip_greeting("/Users/irynamalashenko/Downloads/lines.txt","/Users/irynamalashe
 
 def combine_files(file1, file2, outfile):
     with open(file1, "r") as read_file1:
+        
         with open(file2, "r") as read_file2:
             text_file1 = read_file1.readlines()
             text_file2 = read_file2.readlines()
+            
             if len(text_file1) != len(text_file2):
-                print("Error in line")
-                return
+                return "Error in line"
+                
             with open(outfile, "w") as writer:
                 for item in range(len(text_file1)):
                     combine = text_file1[item].strip("\n") + " " + text_file2[item]
