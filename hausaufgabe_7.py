@@ -9,8 +9,8 @@ import random
 #1
 def generate_names(char, num):
 
-    female_names = [(name, 'male') for name in names.words('female.txt') if name.startswith(char)]
-    male_names = [(name, 'female') for name in names.words('male.txt') if name.startswith(char)]
+    female_names = [(name, 'female') for name in names.words('female.txt') if name.startswith(char)]
+    male_names = [(name, 'male') for name in names.words('male.txt') if name.startswith(char)]
 
     random.shuffle(female_names)
     random.shuffle(male_names)
